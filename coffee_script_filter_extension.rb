@@ -12,5 +12,6 @@ class CoffeeScriptFilterExtension < Radiant::Extension
   
   def activate
     CoffeeScriptFilter
+    Page.send :include, CoffeeScriptTags
   end
 end
