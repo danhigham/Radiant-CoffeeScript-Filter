@@ -6,7 +6,7 @@ module CoffeeScriptTags
   }
 
   tag 'coffeescript' do |tag|
-    CoffeeScript.compile tag.expand
+    "<script>#{CoffeeScript.compile tag.expand}</script>"
   end
 
 end
