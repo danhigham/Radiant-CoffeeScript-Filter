@@ -11,6 +11,8 @@ class CoffeeScriptFilterExtension < Radiant::Extension
   end
   
   def activate
+    if defined?(SheetsExtension)
+      SheetsExtension.javascript_filters << CoffeeScript
     CoffeeScriptFilter
     Page.send :include, CoffeeScriptTags
   end
